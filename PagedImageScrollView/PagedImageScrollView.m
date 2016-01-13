@@ -52,7 +52,7 @@
 
 - (void)setDefaults
 {
-    self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     self.pageControl.hidesForSinglePage = YES;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = NO;
@@ -74,6 +74,7 @@
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * images.count, self.scrollView.frame.size.height);
     for (int i = 0; i < images.count; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.scrollView.frame.size.width * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+        [imageView setContentMode:UIViewContentModeScaleAspectFit];
         [imageView setImage:images[i]];
         [self.scrollView addSubview:imageView];
     }
