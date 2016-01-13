@@ -74,7 +74,7 @@
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * images.count, self.scrollView.frame.size.height);
     for (int i = 0; i < images.count; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.scrollView.frame.size.width * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
-        [imageView setContentMode:UIViewContentModeScaleAspectFit];
+        [imageView setContentMode:UIViewContentModeScaleAspectFill];
         [imageView setImage:images[i]];
         [self.scrollView addSubview:imageView];
     }
